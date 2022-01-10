@@ -1,0 +1,104 @@
+### Создание пользователя
+POST http://localhost:8000/user/register
+Content-Type: application/json
+
+{
+    "first_name": "Егоа",
+    "last_name": "Петров",
+    "email": "pik2kol@yandex.ru",
+    "password":"#2423t3wef3t335",
+    "company":"Panasonic",
+    "position":"Supeviser"
+}
+
+### Подтверждения емаил
+POST http://localhost:8000/user/register/confirm
+Content-Type: application/json
+
+{
+    "email": "lamn4t@yandex.ru",
+    "token":"7b1c0e11069e6de59"
+}
+
+### Авторизация пользователя
+POST http://localhost:8000/user/login
+Content-Type: application/json
+
+{
+    "email": "lamn4t@yandex.ru",
+    "password":"#2423t3wef3t335"
+}
+
+
+### Получение контактов
+GET http://localhost:8000/user/contact
+Content-Type: application/json
+Authorization: Token c27b34036682b33090971bb76e4fe028964482ff
+
+
+### Добавление контакта
+POST http://localhost:8000/user/contact
+Content-Type: application/json
+Authorization: Token b12ec2a8fea0907cc3958c8263793921ae1bfeec
+
+{
+    "city": "Zyyyyy",
+    "street": "Троицкий проспект",
+    "phone": "+79000555522"
+}
+
+### Редактирования контакта
+PUT  http://localhost:8000/user/contact
+Content-Type: application/json
+Authorization: Token 5df18ec6eafd9158dde5a6c340491894e9d7e9f7
+
+{   
+    "id": 2,
+    "city": "Zyyyyy222",
+    "street": "Троицкий проспект222",
+    "phone": "+79000551111"
+}
+
+### Удаление контакта
+DELETE   http://localhost:8000/user/contact
+Content-Type: application/json
+Authorization: Token 5df18ec6eafd9158dde5a6c340491894e9d7e9f7
+
+{   
+    "items": "3"
+}
+
+
+### Редактирования пользователя
+POST http://localhost:8000/user/details
+Content-Type: application/json
+Authorization: Token 5df18ec6eafd9158dde5a6c340491894e9d7e9f7
+
+{   
+    "email": "absolute-okna@yandex.ru"
+}
+
+### Получение информации о пользователе
+GET http://localhost:8000/user/details
+Content-Type: application/json
+Authorization: Token c27b34036682b33090971bb76e4fe028964482ff
+
+
+### Сброс пароля пользователя
+POST http://localhost:8000/user/password_reset
+Content-Type: application/json
+
+{
+"email": "pik2kol@yandex.ru"
+}
+
+
+### Подтверждения нового пароля пользователя
+POST http://localhost:8000/user/password_reset
+Content-Type: application/json
+
+{
+"email": "absolute-okna@yandex.ru",
+"password": "super123",
+"token": "2c86e8ca2f43590894942"
+}

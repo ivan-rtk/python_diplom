@@ -1,0 +1,16 @@
+shop: yamarket
+categories:
+  - id: 1
+    name: Электроника
+
+goods:
+  - id: 5
+    category: 1
+    model: Macbook
+    name: Ноутбук
+    price: 110000
+    price_rrc: 116990
+    quantity: 14
+    parameters:
+      "Диагональ (дюйм)": 6.5
+

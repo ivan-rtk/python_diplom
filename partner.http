@@ -1,0 +1,28 @@
+### Получить статус партнера
+GET   http://localhost:8000/api/v1/partner/state/3/
+Content-Type: application/json
+Authorization: Token 279d9bac936a037d9f7aba350de2d66679d649fc
+
+
+### Обновления статуса партнера
+PATCH  http://localhost:8000/api/v1/partner/state/3/
+Content-Type: application/json
+Authorization: Token 279d9bac936a037d9f7aba350de2d66679d649fc
+
+{  
+    "state": "on"
+}
+
+### Получения заказов магазина
+GET http://localhost:8000/partner/orders
+Content-Type: application/json
+Authorization: Token 279d9bac936a037d9f7aba350de2d66679d649fc
+
+### Обновление прайса
+POST  http://localhost:8000/partner/update
+Content-Type: application/json
+Authorization: Token 279d9bac936a037d9f7aba350de2d66679d649fc
+
+{   
+    "url": "https://raw.githubusercontent.com/NikolayBabankov/final_diplom/master/data/shop1.yaml"
+}
